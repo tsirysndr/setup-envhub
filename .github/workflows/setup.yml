@@ -23,9 +23,12 @@ jobs:
         uses: ./
         with:
           version: v0.2.6
-          dotfiles: github:tsirysndr/dotenv
+          dotfiles: github:tsirysndr/dotfiles-example
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Verify Envhub
         run: |
           envhub --version
           which hello
-          ls -la
+          ls -la ~/
+          ls -la ~/.gradle

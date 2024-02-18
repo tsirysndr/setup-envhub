@@ -9,5 +9,7 @@ Download, install, and setup [Envhub](https://github.com/tsirysndr/envhub) in Gi
   uses: tsirysndr/setup-envhub@v1
   with:
     version: v0.2.6
-    dotfiles: github:tsirysndr/dotenv
+    dotfiles: github:tsirysndr/dotfiles-example
+  env:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
