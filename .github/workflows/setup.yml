@@ -23,5 +23,9 @@ jobs:
         uses: ./
         with:
           version: v0.2.6
+          dotfiles: github:tsirysndr/dotenv
       - name: Verify Envhub
-        run: envhub --version
+        run: |
+          envhub --version
+          which hello
+          ls -la

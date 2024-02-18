@@ -52,6 +52,16 @@ export default async (options) => {
             action.warning(`Failed to save the downloaded version of Envhub to the cache: ${error.message}`);
         }
     }
+    if (options.dotfiles.length > 0) {
+        action.info(`Setting up dotfiles: ${options.dotfiles}`);
+        const { exitCode, stdout, stderr } = await getExecOutput(path, [
+            "use",
+            options.dotfiles,
+        ]);
+        if (exitCode !== 0) {
+            throw new Error(`Failed to set up dotfiles: ${stderr.trim() || stdout.trim()}`);
+        }
+    }
     return {
         version,
         cacheHit,

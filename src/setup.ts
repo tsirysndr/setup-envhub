@@ -7,8 +7,13 @@ import { restoreCache, saveCache } from "@actions/cache";
 import { mv } from "@actions/io";
 import { getExecOutput } from "@actions/exec";
 
+export type Options = {
+  version: string;
+  dotfiles: string;
+};
+
 export default async (
-  options
+  options: Options
 ): Promise<{
   version: string;
   cacheHit: boolean;
@@ -60,6 +65,19 @@ export default async (
     } catch (error) {
       action.warning(
         `Failed to save the downloaded version of Envhub to the cache: ${error.message}`
+      );
+    }
+  }
+
+  if (options.dotfiles.length > 0) {
+    action.info(`Setting up dotfiles: ${options.dotfiles}`);
+    const { exitCode, stdout, stderr } = await getExecOutput(path, [
+      "use",
+      options.dotfiles,
+    ]);
+    if (exitCode !== 0) {
+      throw new Error(
+        `Failed to set up dotfiles: ${stderr.trim() || stdout.trim()}`
       );
     }
   }

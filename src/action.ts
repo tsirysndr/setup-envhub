@@ -8,6 +8,7 @@ if (!process.env.RUNNER_TEMP) {
 
 setup({
   version: action.getInput("version"),
+  dotfiles: action.getInput("dotfiles"),
 })
   .then(({ version, cacheHit }) => {
     action.setOutput("version", version);
