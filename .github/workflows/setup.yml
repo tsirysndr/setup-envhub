@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  setup-superviseur:
+  setup-envhub:
     runs-on: ${{ matrix.os }}
     continue-on-error: true
     strategy:
