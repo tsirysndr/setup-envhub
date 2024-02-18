@@ -8,7 +8,7 @@ inputs:
   version:
     description: Envhub version to install
     required: false
-    default: v0.2.5
+    default: v0.2.6
 outputs:
   version:
     description: Envhub version installed

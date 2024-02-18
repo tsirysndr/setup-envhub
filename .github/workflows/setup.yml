@@ -22,6 +22,6 @@ jobs:
       - name: Setup Envhub
         uses: ./
         with:
-          version: v0.2.5
+          version: v0.2.6
       - name: Verify Envhub
         run: envhub --version
