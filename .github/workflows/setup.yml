@@ -29,6 +29,7 @@ jobs:
       - name: Verify Envhub
         run: |
           envhub --version
+          envhub status
           which hello
           eza -la ~/
           eza -la ~/.gradle
