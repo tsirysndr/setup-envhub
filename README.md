@@ -1,4 +1,4 @@
-# setup-envhub
+# Automate environment setup
 
 [![Setup Envhub](https://github.com/tsirysndr/setup-envhub/actions/workflows/setup.yml/badge.svg)](https://github.com/tsirysndr/setup-envhub/actions/workflows/setup.yml)
 [![GitHub marketplace](https://img.shields.io/badge/marketplace-setup--envhub-blue?logo=github&style)](https://github.com/marketplace/actions/setup-envhub)
