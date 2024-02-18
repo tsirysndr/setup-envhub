@@ -1,5 +1,8 @@
 # setup-envhub
 
+[![Setup Envhub](https://github.com/tsirysndr/setup-envhub/actions/workflows/setup.yml/badge.svg)](https://github.com/tsirysndr/setup-envhub/actions/workflows/setup.yml)
+[![GitHub marketplace](https://img.shields.io/badge/marketplace-setup--envhub-blue?logo=github&style)](https://github.com/marketplace/actions/setup-envhub)
+
 Download, install, and setup [Envhub](https://github.com/tsirysndr/envhub) in GitHub Actions.
 
 ## 🚀 Usage
