@@ -8,5 +8,5 @@ Download, install, and setup [Envhub](https://github.com/tsirysndr/envhub) in Gi
 - name: Setup Envhub
   uses: tsirysndr/setup-envhub@v1
   with:
-    version: 'v0.2.4'
+    version: 'v0.2.5'
 ```
