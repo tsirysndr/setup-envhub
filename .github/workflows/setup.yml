@@ -1,0 +1,27 @@
+name: Setup Envhub
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  setup-superviseur:
+    runs-on: ${{ matrix.os }}
+    continue-on-error: true
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Envhub
+        uses: ./
+        with:
+          version: v0.2.4
+      - name: Verify Envhub
+        run: envhub --version

@@ -1,0 +1,19 @@
+name: Setup Envhub
+description: Download, install, and setup Envhub to your path.
+author: Tsiry Sandratraina
+branding:
+  icon: play-circle
+  color: green
+inputs:
+  version:
+    description: Envhub version to install
+    required: false
+    default: v0.2.4
+outputs:
+  version:
+    description: Envhub version installed
+  cache-hit:
+    description: Was the install cached?
+runs:
+  using: node16
+  main: dist/action.js
