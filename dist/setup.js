@@ -81,7 +81,7 @@ function getDownloadUrl(options) {
     const { href } = new URL(`${release}/envhub_${release}_${cpu[arch] || arch}-${os}.tar.gz`, "https://github.com/tsirysndr/envhub/releases/download/");
     return {
         url: href,
-        cacheKey: `envhub-${release}-${arch}-${platform}`,
+        cacheKey: `envhub-${release}-${arch}-${os}`,
     };
 }
 async function verifyEnvhub(path) {

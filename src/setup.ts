@@ -110,7 +110,7 @@ function getDownloadUrl(options?: {
 
   return {
     url: href,
-    cacheKey: `envhub-${release}-${arch}-${platform}`,
+    cacheKey: `envhub-${release}-${arch}-${os}`,
   };
 }
 
