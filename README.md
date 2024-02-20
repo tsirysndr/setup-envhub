@@ -11,7 +11,7 @@ Download, install, and setup [Envhub](https://github.com/tsirysndr/envhub) in Gi
 - name: Setup Envhub
   uses: tsirysndr/setup-envhub@v1
   with:
-    version: v0.2.10
+    version: v0.2.11
     dotfiles: github:tsirysndr/dotfiles-example
   env:
     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
