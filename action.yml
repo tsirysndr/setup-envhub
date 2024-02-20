@@ -10,7 +10,7 @@ inputs:
     required: false
     default: v0.2.9
   dotfiles:
-    description: Path to dotfiles, can be a directory or a github repository (e.g. tsirysndr/dotfiles-example)
+    description: Path to dotfiles, can be a directory or a github repository (e.g. github:tsirysndr/dotfiles-example)
     required: false
 outputs:
   version:
