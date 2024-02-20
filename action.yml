@@ -12,6 +12,10 @@ inputs:
   dotfiles:
     description: Path to dotfiles, can be a directory or a github repository (e.g. github:tsirysndr/dotfiles-example)
     required: false
+  options:
+    description: Additional options to pass to the install command
+    required: false
+    default: ""
 outputs:
   version:
     description: Envhub version installed

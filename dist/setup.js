@@ -54,10 +54,10 @@ export default async (options) => {
     }
     if (options.dotfiles.length > 0) {
         action.info(`Setting up dotfiles: ${options.dotfiles}`);
-        const { exitCode, stdout, stderr } = await getExecOutput(path, [
-            "use",
-            options.dotfiles,
-        ]);
+        const args = options.options !== ""
+            ? ["use", options.dotfiles, ...options.options.split(" ")]
+            : ["use", options.dotfiles];
+        const { exitCode, stdout, stderr } = await getExecOutput(path, args);
         if (exitCode !== 0) {
             throw new Error(`Failed to set up dotfiles: ${stderr.trim() || stdout.trim()}`);
         }
